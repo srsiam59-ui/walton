@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="login-container">
+    <div class="logo">NEXUS</div>
+    <p class="subtitle">Welcome back! Please login to continue.</p>
+
+    <form id="loginForm">
+
+        <div class="input-box">
+            <label>Email Address</label>
+            <input type="email" id="email"
+                   placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-box">
+            <label>Password</label>
+            <div class="password-box">
+                <input type="password" id="password"
+                       placeholder="Enter your password" required>
+                <span id="togglePassword">SHOW</span>
+            </div>
+        </div>
+
+        <div class="remember">
+            <label>
+                <input type="checkbox" id="remember">
+                Remember me
+            </label>
+        </div>
+
+        <button type="submit" id="loginBtn">SIGN IN</button>
+
+        <p id="message"></p>
+
+    </form>
+
+    <div class="footer">
+        Protected Login System | © 2026 NEXUS
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

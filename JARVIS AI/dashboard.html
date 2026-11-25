@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #080d19;
+            color: white;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .dashboard {
+            text-align: center;
+            padding: 40px;
+            background: #111b2d;
+            border: 1px solid #293d5b;
+            border-radius: 20px;
+            width: min(90%, 500px);
+        }
+
+        h1 { color: #42b5ff; }
+
+        button {
+            padding: 13px 30px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            background: #168cff;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="dashboard">
+    <h1>Welcome to NEXUS!</h1>
+    <p>You have successfully opened the dashboard.</p>
+
+    <button onclick="location.href='login.html'">
+        LOG OUT
+    </button>
+</div>
+
+</body>
+</html>

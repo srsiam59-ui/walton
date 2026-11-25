@@ -1,0 +1,57 @@
+:root{--bg:#f3f6f5;--card:#fff;--ink:#1b2a27;--mut:#60726e;--line:#d6dedc;--head:#e8efed;--acc:#1d6f42;--red:#b3261e;--hl:#dff0e5;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101716;--card:#16211f;--ink:#e3ece9;--mut:#93a6a2;--line:#2c3b38;--head:#1d2c29;--acc:#4cc27f;--red:#ff8a80;--hl:#21392d}}
+:root[data-theme="dark"]{--bg:#101716;--card:#16211f;--ink:#e3ece9;--mut:#93a6a2;--line:#2c3b38;--head:#1d2c29;--acc:#4cc27f;--red:#ff8a80;--hl:#21392d}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.4 "Hind Siliguri","Segoe UI",system-ui,sans-serif}
+button,input{font:inherit;color:var(--ink)}
+button{padding:7px 12px;border:1px solid var(--line);background:var(--card);border-radius:6px;cursor:pointer}
+button.p{background:var(--acc);border-color:var(--acc);color:#fff}
+button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+#app{display:grid;grid-template-columns:300px 1fr;height:100%}
+aside{border-right:1px solid var(--line);background:var(--card);display:flex;flex-direction:column;min-height:0}
+aside header{padding:12px;border-bottom:1px solid var(--line)}
+aside h1{font-size:1.1rem;margin:0 0 2px}
+.tot{color:var(--mut);font-size:.9rem}
+.tot b{color:var(--red)}
+.tools{display:flex;gap:6px;padding:10px 12px}
+.tools input{flex:1;min-width:0;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+#list{overflow:auto;flex:1}
+.it{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line);cursor:pointer;width:100%;border-radius:0;border-width:0 0 1px;text-align:left;background:transparent}
+.it.on{background:var(--hl)}
+.it small{display:block;color:var(--mut)}
+.it .b{font-weight:700;white-space:nowrap}
+.red{color:var(--red)}.ok{color:var(--acc)}
+main{overflow:auto;padding:16px;min-width:0}
+.empty{color:var(--mut);padding:40px 10px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-bottom:12px}.grid label{display:block;color:var(--mut);font-size:.8rem}.grid input{width:100%;padding:7px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card)}.sum{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.sum div{flex:1;min-width:120px;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:8px 10px}.sum span{display:block;color:var(--mut);font-size:.8rem}.sum b{font-size:1.25rem}.top{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.top h2{margin:0 0 2px;font-size:1.3rem}
+.top .meta{color:var(--mut)}
+.big{text-align:right}
+.big span{display:block;color:var(--mut);font-size:.85rem}
+.big b{font-size:1.7rem}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:620px}
+th,td{border:1px solid var(--line);padding:0}
+th{background:var(--head);color:var(--mut);font-weight:600;padding:6px 8px;text-align:left}
+th.n,td.n{text-align:right}
+td input{width:100%;border:0;background:transparent;padding:7px 8px;min-width:70px}
+td input.n{text-align:right}
+td input:focus{outline:2px solid var(--acc);outline-offset:-2px;background:var(--bg)}
+td.bal{padding:7px 8px;text-align:right;font-weight:600;white-space:nowrap;background:var(--head)}
+td.x{width:34px;text-align:center}
+td.x button{border:0;background:transparent;padding:4px 8px;color:var(--mut)}
+tfoot td{background:var(--head);font-weight:700;padding:7px 8px;text-align:right}
+.act{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+dialog{border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);max-width:90vw;width:340px}
+dialog label{display:block;margin:8px 0 2px;color:var(--mut);font-size:.85rem}
+dialog input{width:100%;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+.back{display:none;margin-bottom:10px}
+#note{background:var(--hl);padding:6px 12px;font-size:.85rem}
+@media(max-width:700px){
+ #app{grid-template-columns:1fr}
+ #app.det aside{display:none}
+ #app:not(.det) main{display:none}
+ .back{display:inline-block}
+}

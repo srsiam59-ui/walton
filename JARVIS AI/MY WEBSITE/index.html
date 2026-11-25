@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Walton</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+ <aside>
+  <header><h1>Morden Electronics </h1><div class="tot">মোট বাকি: <b id="all">৳0</b></div></header>
+  <div id="note" hidden></div>
+  <div class="tools"><input id="q" placeholder="Naam ba account khujo" aria-label="Khujo"><button class="p" id="add">+ Customer</button></div>
+  <div id="list"></div>
+ </aside>
+ <main id="main"><div class="empty">Baam theke customer select koro ba notun customer jogo koro.</div></main>
+</div>
+<dialog id="dlg"><form method="dialog" id="f">
+ <h3 style="margin:0 0 6px">Notun customer</h3>
+ <label for="fn">Customer Name</label><input id="fn" required>
+ <label for="fp">Number</label><input id="fp" inputmode="tel">
+ <label for="fa">Account No</label><input id="fa">
+ <label for="fr">Product Name</label><input id="fr">
+ <label for="ft">Total (৳)</label><input id="ft" inputmode="decimal">
+ <div class="act"><button class="p" value="ok">Save</button><button value="no" formnovalidate>Bondho</button></div>
+</form></dialog>
+<script src="script.js"></script>
+</body>
+</html>
